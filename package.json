@@ -1,0 +1,26 @@
+{
+  "name": "feiswebsite",
+  "version": "1.0.0",
+  "description": "Official Feis Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss stylesheet/input.css -o stylesheet/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfacecchia/feiswebsite.git"
+  },
+  "author": "Feis._.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfacecchia/feiswebsite/issues"
+  },
+  "homepage": "https://github.com/mfacecchia/feiswebsite#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.17"
+  }
+}
