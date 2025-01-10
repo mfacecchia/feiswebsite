@@ -4,7 +4,7 @@
   "description": "Official Feis Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss stylesheet/input.css -o stylesheet/style.css --watch",
+    "dev": "postcss assets/css/input.css -o assets/css/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
