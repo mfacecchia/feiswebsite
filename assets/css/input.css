@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+    :root {
+        --background: 0 0% 85%;
+        --foreground: 0 0% 9%;
+        --primary: 275 100% 50%;
+        --secondary: 236 100% 50%;
+        --card: 0, 0%, 20%;
+        --ghost: 0 0% 31%;
+        --radius: 1rem;
+        --padding: 1.25rem;
+    }
+
+    .dark {
+        --background: 0 0% 9%;
+        --foreground: 0 0% 85%;
+    }
+
+    body {
+        @apply p-lg bg-background text-foreground transition-colors duration-500 ease-in-out;
+    }
+
+    h1 {
+        @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+    }
+    h2 {
+        @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+    }
+    h3 {
+        @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+    }
+    h4 {
+        @apply scroll-m-20 text-xl font-semibold tracking-tight;
+    }
+    p {
+        @apply leading-7 [&:not(:first-child)]:mt-6;
+    }
+    blockquote {
+        @apply mt-6 border-l-2 pl-6 italic;
+    }
+    ul {
+        @apply my-6 ml-6 list-disc [&>li]:mt-2;
+    }
+    .large {
+        @apply text-lg font-semibold;
+    }
+    .small {
+        @apply text-sm font-medium leading-none;
+    }
+}
