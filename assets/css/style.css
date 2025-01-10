@@ -504,8 +504,10 @@ video {
         --foreground: 0 0% 9%;
         --primary: 275 100% 50%;
         --secondary: 236 100% 50%;
-        --card: 0, 0%, 20%;
-        --ghost: 0 0% 31%;
+        --card: 0 0% 25%;
+        --card-foreground: 0 0% 85%;
+        --muted: 0 0% 70%;
+        --muted-foreground: 0 0% 9%;
         --radius: 1rem;
         --padding: 1.25rem;
     }
@@ -513,6 +515,10 @@ video {
     .dark {
         --background: 0 0% 9%;
         --foreground: 0 0% 85%;
+        --card: 0 0% 65%;
+        --card-foreground: 0 0% 9%;
+        --muted: 0 0% 15%;
+        --muted-foreground: 0 0 85%;
     }
 
     body {
@@ -599,13 +605,12 @@ video {
 .rounded-sm {
   border-radius: calc(var(--radius) - 4px);
 }
-.bg-ghost {
-  background-color: hsl(var(--ghost));
+.bg-muted {
+  background-color: hsl(var(--muted));
 }
 .p-sm {
   padding: calc(var(--padding) - 4px);
 }
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
 }
