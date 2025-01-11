@@ -15,6 +15,9 @@ module.exports = {
             md: "calc(var(--padding) - 2px)",
             sm: "calc(var(--padding) - 4px)",
         },
+        height: {
+            "1.5": "0.3rem"
+        },
         colors: {
             background: "hsl(var(--background))",
             foreground: "hsl(var(--foreground))",
