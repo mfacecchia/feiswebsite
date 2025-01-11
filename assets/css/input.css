@@ -8,8 +8,8 @@
         --foreground: 0 0% 9%;
         --primary: 275 100% 50%;
         --secondary: 236 100% 50%;
-        --card: 0 0% 25%;
-        --card-foreground: 0 0% 85%;
+        --card: 0 0% 80%;
+        --card-foreground: 0 0% 9%;
         --muted: 0 0% 70%;
         --muted-foreground: 0 0% 9%;
         --radius: 1rem;
@@ -19,9 +19,9 @@
     .dark {
         --background: 0 0% 9%;
         --foreground: 0 0% 85%;
-        --card: 0 0% 65%;
-        --card-foreground: 0 0% 9%;
-        --muted: 0 0% 15%;
+        --card: 0 0% 14%;
+        --card-foreground: 0 0% 85%;
+        --muted: 0 0% 30%;
         --muted-foreground: 0 0 85%;
     }
 
@@ -46,7 +46,7 @@
         @apply scroll-m-20 text-xl font-semibold tracking-tight;
     }
     p {
-        @apply leading-7 [&:not(:first-child)]:mt-6;
+        @apply leading-7;
     }
     blockquote {
         @apply mt-6 border-l-2 pl-6 italic;
