@@ -33,6 +33,10 @@
         @apply flex flex-col items-center justify-center gap-12 w-full min-h-screen text-center;
     }
 
+    section {
+        @apply flex flex-col gap-7;
+    }
+
     h1 {
         @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
     }
@@ -64,5 +68,11 @@
 @layer components {
     .tooltip::before {
         @apply bg-muted text-muted-foreground;
+    }
+    .card {
+        @apply w-full max-w-[400px] bg-card text-card-foreground p-md rounded-md;
+    }
+    .collapse {
+        @apply p-0;
     }
 }
