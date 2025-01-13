@@ -1,4 +1,5 @@
 const autoprefixer = require('autoprefixer');
+const daisyui = require('daisyui');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -33,8 +34,12 @@ module.exports = {
             },
         }
     },
+    daisyui: {
+        themes: []
+    }
 },
     plugins: [
+        daisyui
     ],
 }
 
