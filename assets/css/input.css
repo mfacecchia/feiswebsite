@@ -66,6 +66,16 @@
     }
 }
 @layer components {
+    .cv-download-link {
+        @apply flex w-fit gap-1 bg-gradient-to-r from-primary to-secondary bg-clip-text relative;
+    }
+    .cv-download-link::after {
+        content: "";
+        @apply absolute origin-left bottom-0 left-6 w-[calc(100%-1.5rem)] h-[2px] scale-x-0 bg-gradient-to-r from-primary to-secondary rounded-full transition-transform duration-500;
+    }
+    .cv-download-link:hover::after {
+        @apply scale-x-100;
+    }
     .ai-ish-separator {
         @apply w-full h-1.5 rounded-full border-none relative overflow-visible bg-gradient-to-r from-primary to-secondary;
     }

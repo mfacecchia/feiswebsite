@@ -893,21 +893,6 @@ html {
 .bg-muted {
   background-color: hsl(var(--muted));
 }
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-.from-primary {
-  --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
-  --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.to-secondary {
-  --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
-}
-.bg-clip-text {
-  -webkit-background-clip: text;
-          background-clip: text;
-}
 .fill-card-foreground {
   fill: hsl(var(--card-foreground));
 }
@@ -939,18 +924,6 @@ html {
 }
 .text-muted-foreground {
   color: hsl(var(--muted-foreground));
-}
-.underline {
-  text-decoration-line: underline;
-}
-.no-underline {
-  text-decoration-line: none;
-}
-.decoration-current {
-  text-decoration-color: currentColor;
-}
-.decoration-primary {
-  text-decoration-color: hsl(var(--primary));
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1663,6 +1636,44 @@ details.collapse summary::-webkit-details-marker {
   right: auto;
   bottom: auto;
 }
+.cv-download-link {
+  position: relative;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0.25rem;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.cv-download-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 1.5rem;
+        height: 2px;
+        width: calc(100% - 1.5rem);
+        transform-origin: left;
+        --tw-scale-x: 0;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        border-radius: 9999px;
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+        --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
+        --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+    }
+.cv-download-link:hover::after {
+  --tw-scale-x: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .ai-ish-separator {
   position: relative;
   height: 0.3rem;
@@ -1747,13 +1758,4 @@ hr {
 }
 .hover\:animate-ping:hover {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-.hover\:\!underline:hover {
-  text-decoration-line: underline !important;
-}
-.hover\:underline-offset-1:hover {
-  text-underline-offset: 1px;
 }
