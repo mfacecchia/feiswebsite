@@ -73,6 +73,7 @@
         content: "";
         @apply absolute top-0 right-0 w-full h-full rounded-full bg-gradient-to-r from-primary to-secondary blur-sm;
     }
+
     hr {
         @apply w-full h-[1px] rounded-full border-none bg-muted;
     }
@@ -80,16 +81,29 @@
     .tooltip::before {
         @apply bg-muted text-muted-foreground;
     }
+
     .card {
         @apply w-full max-w-[400px] bg-card text-card-foreground p-md rounded-md;
     }
+
     .collapse {
         @apply p-0;
     }
+
     .card {
         @apply w-full max-w-[400px] bg-card text-card-foreground p-md rounded-md;
     }
+
     .collapse {
         @apply p-0;
+    }
+
+    .arrow {
+        @apply transition-transform duration-300;
+    }
+
+    .collapse:not(.collapse-close):has(> input[type="checkbox"]:checked) .arrow,
+    .collapse:not(.collapse-close):has(> input[type="radio"]:checked) .arrow {
+        @apply rotate-180;
     }
 }

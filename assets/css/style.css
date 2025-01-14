@@ -889,12 +889,6 @@ html {
 .\!pr-4 {
   padding-right: 1rem !important;
 }
-.pr-1 {
-  padding-right: 0.25rem;
-}
-.pr-2 {
-  padding-right: 0.5rem;
-}
 .pr-3 {
   padding-right: 0.75rem;
 }
@@ -1524,4 +1518,14 @@ hr {
 }
 .collapse {
   padding: 0px;
+}
+.arrow {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.collapse:not(.collapse-close):has(> input[type="checkbox"]:checked) .arrow,
+    .collapse:not(.collapse-close):has(> input[type="radio"]:checked) .arrow {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
