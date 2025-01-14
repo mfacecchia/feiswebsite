@@ -30,7 +30,7 @@
     }
 
     .root {
-        @apply flex flex-col items-center justify-center gap-12 w-full min-h-screen text-center;
+        @apply flex flex-col gap-12 w-full;
     }
 
     section {
@@ -66,8 +66,22 @@
     }
 }
 @layer components {
+    hr {
+        @apply bg-gradient-to-r from-primary to-secondary w-full h-1.5 rounded-full border-none relative overflow-visible;
+    }
+    hr::before {
+        content: "";
+        @apply absolute top-0 right-0 w-full h-full rounded-full bg-gradient-to-r from-primary to-secondary blur-sm;
+    }
+
     .tooltip::before {
         @apply bg-muted text-muted-foreground;
+    }
+    .card {
+        @apply w-full max-w-[400px] bg-card text-card-foreground p-md rounded-md;
+    }
+    .collapse {
+        @apply p-0;
     }
     .card {
         @apply w-full max-w-[400px] bg-card text-card-foreground p-md rounded-md;
