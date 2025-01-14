@@ -1454,7 +1454,7 @@ details.collapse summary::-webkit-details-marker {
   --togglehandleborder: 0 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset,
       var(--handleoffsetcalculator) 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset;
 }
-hr {
+.ai-ish-separator {
   position: relative;
   height: 0.3rem;
   width: 100%;
@@ -1467,7 +1467,7 @@ hr {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
 }
-hr::before {
+.ai-ish-separator::before {
         content: "";
         position: absolute;
         top: 0px;
@@ -1483,6 +1483,13 @@ hr::before {
         --tw-blur: blur(4px);
         filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
     }
+hr {
+  height: 1px;
+  width: 100%;
+  border-radius: 9999px;
+  border-style: none;
+  background-color: hsl(var(--muted));
+}
 .card {
   width: 100%;
   max-width: 400px;
