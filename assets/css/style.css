@@ -872,6 +872,15 @@ html {
 .fill-background {
   fill: hsl(var(--background));
 }
+.fill-primary {
+  fill: hsl(var(--primary));
+}
+.fill-muted-foreground {
+  fill: hsl(var(--muted-foreground));
+}
+.fill-card-foreground {
+  fill: hsl(var(--card-foreground));
+}
 .p-1 {
   padding: 0.25rem;
 }
