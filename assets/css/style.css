@@ -814,13 +814,13 @@ html {
   line-height: 1.75rem;
   font-weight: 600;
 }
-    .small {
+    .\!small {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
   line-height: 1;
 }
-    .\!small {
+    .small {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
@@ -842,6 +842,10 @@ html {
 .flex {
   display: flex;
 }
+.size-4 {
+  width: 1rem;
+  height: 1rem;
+}
 .size-5 {
   width: 1.25rem;
   height: 1.25rem;
@@ -849,14 +853,6 @@ html {
 .size-8 {
   width: 2rem;
   height: 2rem;
-}
-.size-3 {
-  width: 0.75rem;
-  height: 0.75rem;
-}
-.size-4 {
-  width: 1rem;
-  height: 1rem;
 }
 .w-full {
   width: 100%;
@@ -877,9 +873,6 @@ html {
 .gap-1 {
   gap: 0.25rem;
 }
-.gap-5 {
-  gap: 1.25rem;
-}
 .gap-3 {
   gap: 0.75rem;
 }
@@ -899,6 +892,21 @@ html {
 }
 .bg-muted {
   background-color: hsl(var(--muted));
+}
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.from-primary {
+  --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-secondary {
+  --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
+}
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .fill-card-foreground {
   fill: hsl(var(--card-foreground));
@@ -931,6 +939,18 @@ html {
 }
 .text-muted-foreground {
   color: hsl(var(--muted-foreground));
+}
+.underline {
+  text-decoration-line: underline;
+}
+.no-underline {
+  text-decoration-line: none;
+}
+.decoration-current {
+  text-decoration-color: currentColor;
+}
+.decoration-primary {
+  text-decoration-color: hsl(var(--primary));
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1535,13 +1555,6 @@ details.collapse summary::-webkit-details-marker {
   right: auto;
   bottom: var(--tooltip-offset);
 }
-.tooltip-bottom:before {
-  transform: translateX(-50%);
-  top: var(--tooltip-offset);
-  left: 50%;
-  right: auto;
-  bottom: auto;
-}
 .tooltip-right:before {
   transform: translateY(-50%);
   top: 50%;
@@ -1642,14 +1655,6 @@ details.collapse summary::-webkit-details-marker {
   right: auto;
   bottom: var(--tooltip-tail-offset);
 }
-.tooltip-bottom:after {
-  transform: translateX(-50%);
-  border-color: transparent transparent var(--tooltip-color) transparent;
-  top: var(--tooltip-tail-offset);
-  left: 50%;
-  right: auto;
-  bottom: auto;
-}
 .tooltip-right:after {
   transform: translateY(-50%);
   border-color: transparent var(--tooltip-color) transparent transparent;
@@ -1742,4 +1747,13 @@ hr {
 }
 .hover\:animate-ping:hover {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+.hover\:\!underline:hover {
+  text-decoration-line: underline !important;
+}
+.hover\:underline-offset-1:hover {
+  text-underline-offset: 1px;
 }
