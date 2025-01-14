@@ -896,6 +896,9 @@ html {
 .fill-card-foreground {
   fill: hsl(var(--card-foreground));
 }
+.stroke-foreground {
+  stroke: hsl(var(--foreground));
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -1642,13 +1645,6 @@ details.collapse summary::-webkit-details-marker {
   width: -moz-fit-content;
   width: fit-content;
   gap: 0.25rem;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
-  --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
-  -webkit-background-clip: text;
-          background-clip: text;
 }
 .cv-download-link::after {
         content: "";

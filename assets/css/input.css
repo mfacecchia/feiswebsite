@@ -67,7 +67,7 @@
 }
 @layer components {
     .cv-download-link {
-        @apply flex w-fit gap-1 bg-gradient-to-r from-primary to-secondary bg-clip-text relative;
+        @apply flex w-fit gap-1 relative;
     }
     .cv-download-link::after {
         content: "";
