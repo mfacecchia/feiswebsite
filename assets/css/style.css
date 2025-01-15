@@ -738,9 +738,26 @@ html {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+    @media (min-width: 768px) {
+
+  body {
+    padding: 40px;
+  }
+}
+
+    @media (min-width: 1280px) {
+
+  body {
+    padding: 50px;
+  }
+}
+
     .root {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   width: 100%;
+  max-width: 1400px;
   flex-direction: column;
   gap: 3rem;
 }
@@ -1710,9 +1727,9 @@ hr {
   background-color: hsl(var(--muted));
   color: hsl(var(--muted-foreground));
 }
+/* TODO: Wrap in a bento grid */
 .card {
   width: 100%;
-  max-width: 400px;
   border-radius: calc(var(--radius) - 2px);
   background-color: hsl(var(--card));
   padding: calc(var(--padding) - 2px);
@@ -1720,17 +1737,6 @@ hr {
 }
 .card-body {
   padding: 0px;
-}
-.collapse {
-  padding: 0px;
-}
-.card {
-  width: 100%;
-  max-width: 400px;
-  border-radius: calc(var(--radius) - 2px);
-  background-color: hsl(var(--card));
-  padding: calc(var(--padding) - 2px);
-  color: hsl(var(--card-foreground));
 }
 .collapse {
   padding: 0px;

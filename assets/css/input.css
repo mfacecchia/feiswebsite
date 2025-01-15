@@ -27,10 +27,12 @@
 
     body {
         @apply p-lg bg-background text-foreground transition-colors duration-500 ease-in-out min-w-[350px];
+        @apply md:p-[40px];
+        @apply xl:p-[50px];
     }
 
     .root {
-        @apply flex flex-col gap-12 w-full;
+        @apply flex flex-col gap-12 w-full max-w-[1400px] mx-auto;
     }
 
     section {
@@ -92,8 +94,9 @@
         @apply bg-muted text-muted-foreground;
     }
 
+    /* TODO: Wrap in a bento grid */
     .card {
-        @apply w-full max-w-[400px] bg-card text-card-foreground p-md rounded-md;
+        @apply w-full bg-card text-card-foreground p-md rounded-md;
     }
     .card-body {
         @apply p-0;
@@ -101,10 +104,6 @@
 
     .collapse {
         @apply p-0;
-    }
-
-    .card {
-        @apply w-full max-w-[400px] bg-card text-card-foreground p-md rounded-md;
     }
 
     .collapse {
