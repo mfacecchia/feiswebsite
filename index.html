@@ -674,11 +674,52 @@
             </section>
         </div>
 
-        <button
-            class="bg-muted text-muted-foreground p-sm rounded-sm"
-            onclick="document.querySelector('body').classList.toggle('dark')"
+        <label
+            class="swap swap-rotate bg-muted stroke-muted-foreground p-1 rounded-full !fixed bottom-[1.25rem] right-[1.25rem]"
+            title="Toggle Theme"
         >
-            Toggle theme
-        </button>
+            <input
+                type="checkbox"
+                class="theme-controller"
+                onchange="document.querySelector('body').classList.toggle('dark')"
+                onkeydown="if(event.code === 'Enter') document.querySelector('body').classList.toggle('dark')"
+            />
+            <svg
+                class="swap-off size-7 stroke-inherit"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 3v1"></path>
+                <path d="M12 20v1"></path>
+                <path d="M3 12h1"></path>
+                <path d="M20 12h1"></path>
+                <path d="m18.364 5.636-.707.707"></path>
+                <path d="m6.343 17.657-.707.707"></path>
+                <path d="m5.636 5.636.707.707"></path>
+                <path d="m17.657 17.657.707.707"></path>
+            </svg>
+
+            <svg
+                class="swap-on size-7 stroke-inherit"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+        </label>
     </body>
 </html>
