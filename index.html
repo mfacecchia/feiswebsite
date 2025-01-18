@@ -7,7 +7,7 @@
         <link rel="icon" href="./assets/images/me_moji-2.png" />
         <title>Feis' Website</title>
     </head>
-    <body>
+    <body onload="getPreferredTheme()">
         <div class="root">
             <div>
                 <h1>Hello, World!</h1>
@@ -681,8 +681,9 @@
             <input
                 type="checkbox"
                 class="theme-controller"
-                onchange="document.querySelector('body').classList.toggle('dark')"
-                onkeydown="if(event.code === 'Enter') document.querySelector('body').classList.toggle('dark')"
+                id="themeController"
+                onchange="toggleTheme();"
+                onkeydown="if(event.code === 'Enter') toggleTheme();"
             />
             <svg
                 class="swap-off size-7 stroke-inherit"
@@ -721,5 +722,7 @@
                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
             </svg>
         </label>
+
+        <script src="./assets/script/themeController.js"></script>
     </body>
 </html>
