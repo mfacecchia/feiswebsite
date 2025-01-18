@@ -799,9 +799,6 @@ html {
   background-color: hsl(var(--background));
   padding: var(--padding);
   color: hsl(var(--foreground));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
     @media (min-width: 768px) {
@@ -816,6 +813,13 @@ html {
   body {
     padding: 50px;
   }
+}
+
+    body,
+    .cv-download-link svg {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
     .root {

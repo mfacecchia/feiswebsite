@@ -26,9 +26,14 @@
     }
 
     body {
-        @apply p-lg bg-background text-foreground transition-colors duration-500 ease-in-out min-w-[350px];
+        @apply p-lg bg-background text-foreground min-w-[350px];
         @apply md:p-[40px];
         @apply xl:p-[50px];
+    }
+
+    body,
+    .cv-download-link svg {
+        @apply transition-colors duration-500 ease-in-out;
     }
 
     .root {
