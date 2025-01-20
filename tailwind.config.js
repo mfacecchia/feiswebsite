@@ -4,6 +4,9 @@ const daisyui = require('daisyui');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./index.html", "./**/.{html,js}"],
+    daisyui: {
+        themes: [],
+    },
     theme: {
     extend: {
         borderRadius: {
@@ -33,9 +36,6 @@ module.exports = {
                 foreground: "hsl(var(--muted-foreground))"
             },
         }
-    },
-    daisyui: {
-        themes: []
     }
 },
     plugins: [
