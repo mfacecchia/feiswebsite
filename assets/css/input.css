@@ -16,15 +16,6 @@
         --padding: 1.25rem;
     }
 
-    .dark {
-        --background: 0 0% 9%;
-        --foreground: 0 0% 85%;
-        --card: 0 0% 14%;
-        --card-foreground: 0 0% 85%;
-        --muted: 0 0% 30%;
-        --muted-foreground: 0 0 85%;
-    }
-
     body {
         @apply p-lg bg-background text-foreground min-w-[350px];
         @apply md:p-[40px];
@@ -122,5 +113,16 @@
     .collapse:not(.collapse-close):has(> input[type="checkbox"]:checked) .arrow,
     .collapse:not(.collapse-close):has(> input[type="radio"]:checked) .arrow {
         @apply rotate-180;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark {
+        --background: 0 0% 9%;
+        --foreground: 0 0% 85%;
+        --card: 0 0% 14%;
+        --card-foreground: 0 0% 85%;
+        --muted: 0 0% 30%;
+        --muted-foreground: 0 0 85%;
     }
 }
