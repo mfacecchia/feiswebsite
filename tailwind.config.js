@@ -7,6 +7,7 @@ module.exports = {
     daisyui: {
         themes: [],
     },
+    darkMode: "class",
     theme: {
     extend: {
         borderRadius: {
