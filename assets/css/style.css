@@ -1758,12 +1758,6 @@ hr {
   background-color: hsl(var(--muted));
   color: hsl(var(--muted-foreground));
 }
-.tooltip > .tooltip-content {
-  display: none;
-}
-.tooltip:hover > .tooltip-content {
-  display: block;
-}
 /* TODO: Wrap in a bento grid */
 .card {
   width: 100%;
