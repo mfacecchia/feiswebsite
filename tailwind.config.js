@@ -36,6 +36,7 @@ module.exports = {
                 DEFAULT: "hsl(var(--muted))",
                 foreground: "hsl(var(--muted-foreground))"
             },
+            rustacean: "hsl(var(--rustacean))"
         }
     }
 },

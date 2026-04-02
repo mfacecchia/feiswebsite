@@ -14,6 +14,7 @@
         --muted-foreground: 0 0% 9%;
         --radius: 1rem;
         --padding: 1.25rem;
+        --rustacean: 14.921 81.116% 45.686%;
     }
 
     :root [class~="dark"] {
@@ -23,6 +24,7 @@
         --card-foreground: 0 0% 85%;
         --muted: 0 0% 30%;
         --muted-foreground: 0 0 85%;
+        --rustacean: 14.921 81.116% 45.686%;
     }
 
     body {
@@ -122,5 +124,9 @@
     .collapse:not(.collapse-close):has(> input[type="checkbox"]:checked) .arrow,
     .collapse:not(.collapse-close):has(> input[type="radio"]:checked) .arrow {
         @apply rotate-180;
+    }
+
+    .rustacean {
+        @apply text-rustacean font-bold;
     }
 }
